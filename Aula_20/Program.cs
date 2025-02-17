@@ -1,21 +1,45 @@
-﻿namespace Aula_20;
-
-internal class Program
+﻿namespace Aula_20
 {
-    static void Main(string[] args)
+    internal class Program
     {
-        Console.WriteLine("Hello, World!");
-        Console.Read();
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World!");
 
+            Carro carro = new Carro();
+            carro.DigaSeuNome();
+
+            Aviao aviao = new Aviao();
+            aviao.DigaSeuNome();
+
+            MeusTestes.Carro carro1 = new MeusTestes.Carro();
+            carro1.DigaSeuNome();
+
+            Console.Read();
+
+        }
+    }
+
+
+    class Carro
+    {
+        public void DigaSeuNome()
+        {
+            Console.WriteLine("Eu sou um carro");
+        }
     }
 }
 
 
-class Carro
+
+namespace MeusTestes
 {
-    public void DigaSeuNome()
+    class Carro
     {
-        Console.WriteLine("Eu sou um carro");
+        public void DigaSeuNome()
+        {
+            Console.WriteLine("Eu sou um carro dentro do namespace MeusTestes");
+        }
     }
 }
 
@@ -23,7 +47,7 @@ class Aviao
 {
     public void DigaSeuNome()
     { 
-        Console.WriteLine("Eu sou um carro");
+        Console.WriteLine("Eu sou um aviao");
     }
        
 }
